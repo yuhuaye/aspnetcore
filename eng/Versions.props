@@ -234,9 +234,13 @@
     <AngleSharpPackageVersion>0.9.9</AngleSharpPackageVersion>
     <BenchmarkDotNetPackageVersion>0.10.13</BenchmarkDotNetPackageVersion>
     <CastleCorePackageVersion>4.2.1</CastleCorePackageVersion>
+    <CommandLineParserPackageVersion>2.3.0</CommandLineParserPackageVersion>
     <FSharpCorePackageVersion>4.2.1</FSharpCorePackageVersion>
-    <GoogleProtobufPackageVersion>3.8.0</GoogleProtobufPackageVersion>
+    <GoogleProtobufPackageVersion>3.10.0</GoogleProtobufPackageVersion>
     <GrpcAspNetCorePackageVersion>2.23.2</GrpcAspNetCorePackageVersion>
+    <GrpcAuthPackageVersion>2.25.0</GrpcAuthPackageVersion>
+    <GrpcNetClientPackageVersion>2.23.2</GrpcNetClientPackageVersion>
+    <GrpcToolsPackageVersion>2.25.0</GrpcToolsPackageVersion>
     <IdentityServer4AspNetIdentityPackageVersion>3.0.0</IdentityServer4AspNetIdentityPackageVersion>
     <IdentityServer4EntityFrameworkPackageVersion>3.0.0</IdentityServer4EntityFrameworkPackageVersion>
     <IdentityServer4PackageVersion>3.0.0</IdentityServer4PackageVersion>

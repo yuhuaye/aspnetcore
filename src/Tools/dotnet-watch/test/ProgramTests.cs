@@ -24,7 +24,7 @@ namespace Microsoft.DotNet.Watcher.Tools.Tests
         }
 
         [Fact]
-        [Flaky("<No longer required; Tracked in Kusto>", FlakyOn.All)]
+        [QuarantinedTest]
         public async Task ConsoleCancelKey()
         {
             _tempDir

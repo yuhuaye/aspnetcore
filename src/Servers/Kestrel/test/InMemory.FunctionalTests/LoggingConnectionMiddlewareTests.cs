@@ -14,7 +14,7 @@ namespace Microsoft.AspNetCore.Server.Kestrel.InMemory.FunctionalTests
     public class LoggingConnectionMiddlewareTests : LoggedTest
     {
         [Fact]
-        [Flaky("https://github.com/dotnet/aspnetcore-internal/issues/2276", FlakyOn.Helix.All)]
+        [QuarantinedTest("https://github.com/dotnet/aspnetcore-internal/issues/2276")]
         public async Task LoggingConnectionMiddlewareCanBeAddedBeforeAndAfterHttps()
         {
             await using (var server = new TestServer(context =>

@@ -550,7 +550,7 @@ namespace Microsoft.AspNetCore.WebSockets.Test
         }
 
         [Fact]
-        [Flaky("https://github.com/dotnet/aspnetcore/issues/8187", FlakyOn.Helix.All)]
+        [QuarantinedTest("https://github.com/dotnet/aspnetcore/issues/8187")]
         public async Task OriginIsNotValidatedForNonWebSocketRequests()
         {
             using (var server = KestrelWebSocketHelpers.CreateServer(LoggerFactory, out var port, context =>

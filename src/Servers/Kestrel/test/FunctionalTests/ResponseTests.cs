@@ -339,7 +339,7 @@ namespace Microsoft.AspNetCore.Server.Kestrel.FunctionalTests
         }
 
         [Theory]
-        [Flaky("https://github.com/dotnet/aspnetcore-internal/issues/1972", FlakyOn.All)]
+        [QuarantinedTest("https://github.com/dotnet/aspnetcore-internal/issues/1972")]
         [MemberData(nameof(ConnectionMiddlewareData))]
         public async Task AppCanHandleClientAbortingConnectionMidResponse(ListenOptions listenOptions)
         {
@@ -640,7 +640,7 @@ namespace Microsoft.AspNetCore.Server.Kestrel.FunctionalTests
         }
 
         [Fact]
-        [Flaky("<no longer needed; tracked in Kusto>", FlakyOn.All)]
+        [QuarantinedTest]
         public async Task ConnectionClosedWhenBothRequestAndResponseExperienceBackPressure()
         {
             const int bufferSize = 65536;
@@ -735,7 +735,7 @@ namespace Microsoft.AspNetCore.Server.Kestrel.FunctionalTests
         }
 
         [ConditionalFact]
-        [Flaky("https://github.com/dotnet/aspnetcore-internal/issues/2181", FlakyOn.All)]
+        [QuarantinedTest("https://github.com/dotnet/aspnetcore-internal/issues/2181")]
         public async Task ConnectionNotClosedWhenClientSatisfiesMinimumDataRateGivenLargeResponseChunks()
         {
             var chunkSize = 64 * 128 * 1024;
@@ -815,7 +815,7 @@ namespace Microsoft.AspNetCore.Server.Kestrel.FunctionalTests
 
         [Fact]
         [CollectDump]
-        [Flaky("<No longer needed; tracked in Kusto>", FlakyOn.All)]
+        [QuarantinedTest]
         public async Task ConnectionNotClosedWhenClientSatisfiesMinimumDataRateGivenLargeResponseHeaders()
         {
             var headerSize = 1024 * 1024; // 1 MB for each header value
@@ -903,7 +903,7 @@ namespace Microsoft.AspNetCore.Server.Kestrel.FunctionalTests
         }
 
         [Fact]
-        [Flaky("https://github.com/dotnet/aspnetcore/issues/13219", FlakyOn.AzP.Linux, FlakyOn.Helix.All)]
+        [QuarantinedTest("https://github.com/dotnet/aspnetcore/issues/13219")]
         public async Task ClientCanReceiveFullConnectionCloseResponseWithoutErrorAtALowDataRate()
         {
             var chunkSize = 64 * 128 * 1024;

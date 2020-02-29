@@ -133,7 +133,7 @@ namespace Microsoft.AspNetCore.Server.Kestrel.FunctionalTests
         [ConditionalFact]
         [IPv6SupportedCondition]
 #if LIBUV
-        [Flaky("https://github.com/dotnet/aspnetcore-internal/issues/1977", FlakyOn.Helix.All)] // https://github.com/dotnet/aspnetcore/issues/8109
+        [QuarantinedTest("https://github.com/dotnet/aspnetcore-internal/issues/1977")] // https://github.com/dotnet/aspnetcore/issues/8109
 #endif
         public Task RemoteIPv6Address()
         {
@@ -538,7 +538,7 @@ namespace Microsoft.AspNetCore.Server.Kestrel.FunctionalTests
         }
 
         [Theory]
-        [Flaky("https://github.com/dotnet/aspnetcore-internal/issues/2181", FlakyOn.Helix.All)]
+        [QuarantinedTest("https://github.com/dotnet/aspnetcore-internal/issues/2181")]
         [MemberData(nameof(ConnectionMiddlewareData))]
         public async Task ConnectionClosedTokenFiresOnServerFIN(ListenOptions listenOptions)
         {
@@ -792,7 +792,7 @@ namespace Microsoft.AspNetCore.Server.Kestrel.FunctionalTests
 
         [Theory]
 #if LIBUV
-        [Flaky("https://github.com/dotnet/aspnetcore-internal/issues/1971", FlakyOn.Helix.All)]
+        [QuarantinedTest("https://github.com/dotnet/aspnetcore-internal/issues/1971")]
 #endif
         [MemberData(nameof(ConnectionMiddlewareData))]
         public async Task AppCanHandleClientAbortingConnectionMidRequest(ListenOptions listenOptions)

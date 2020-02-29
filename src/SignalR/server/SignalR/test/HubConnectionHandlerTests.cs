@@ -1039,7 +1039,7 @@ namespace Microsoft.AspNetCore.SignalR.Tests
         }
 
         [Fact]
-        [Flaky("<No longer used; tracked in Kusto>", FlakyOn.All)]
+        [QuarantinedTest]
         public async Task HubMethodCanBeRenamedWithAttribute()
         {
             using (StartVerifiableLog())

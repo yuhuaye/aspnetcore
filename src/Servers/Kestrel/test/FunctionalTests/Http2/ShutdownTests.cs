@@ -45,7 +45,7 @@ namespace Microsoft.AspNetCore.Server.Kestrel.FunctionalTests.Http2
         [CollectDump]
         [ConditionalFact]
         [SkipOnHelix("https://github.com/dotnet/aspnetcore/issues/9985", Queues = "Fedora.28.Amd64;Fedora.28.Amd64.Open")]
-        [Flaky("https://github.com/dotnet/aspnetcore/issues/9985", FlakyOn.All)]
+        [QuarantinedTest("https://github.com/dotnet/aspnetcore/issues/9985")]
         public async Task GracefulShutdownWaitsForRequestsToFinish()
         {
             var requestStarted = new TaskCompletionSource<object>(TaskCreationOptions.RunContinuationsAsynchronously);
@@ -101,7 +101,7 @@ namespace Microsoft.AspNetCore.Server.Kestrel.FunctionalTests.Http2
         }
 
         [ConditionalFact]
-        [Flaky("https://github.com/dotnet/aspnetcore-internal/issues/2667", FlakyOn.All)]
+        [QuarantinedTest("https://github.com/dotnet/aspnetcore-internal/issues/2667")]
         public async Task GracefulTurnsAbortiveIfRequestsDoNotFinish()
         {
             var requestStarted = new TaskCompletionSource<object>(TaskCreationOptions.RunContinuationsAsynchronously);

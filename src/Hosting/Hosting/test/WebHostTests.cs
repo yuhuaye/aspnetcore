@@ -238,7 +238,7 @@ namespace Microsoft.AspNetCore.Hosting
         }
 
         [ConditionalFact]
-        [Flaky("https://github.com/dotnet/aspnetcore-internal/issues/2244", FlakyOn.Helix.All)]
+        [QuarantinedTest("https://github.com/dotnet/aspnetcore-internal/issues/2244")]
         public async Task WebHostStopAsyncUsesDefaultTimeoutIfNoTokenProvided()
         {
             var data = new Dictionary<string, string>
